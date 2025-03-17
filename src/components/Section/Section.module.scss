@@ -2,7 +2,7 @@
     width: 100%;
     min-height: calc(100dvh - 32px);
     
-    padding: 32px;
+    padding: 32px 0px;
 
     background: #fafafa;
 
@@ -11,7 +11,25 @@
 	mask-position: center center;
 	mask-repeat: no-repeat;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     @media screen and (min-width: 1068px) {
         min-height: calc(100dvh - 64px);
+    }
+
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px 32px;
+
+        @media screen and (min-width: 1068px) {
+            padding: 0px 64px;
+        }
+
+        > *:not(:first-child) {
+            margin-top: 24px;
+        }
     }
 }

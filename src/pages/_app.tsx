@@ -1,7 +1,19 @@
 import '@/styles/reset.scss'
 import '@/styles/globals.scss'
 import type { AppProps } from 'next/app'
+import { Inter } from 'next/font/google'
+
+// Define Inter font
+const inter = Inter({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'],
+    variable: '--font-inter',
+})
 
 export default function App({ Component, pageProps }: AppProps) {
-    return <Component {...pageProps} />
+    return (
+        <div className={inter.className}>
+            <Component {...pageProps} />
+        </div>
+    )
 }
