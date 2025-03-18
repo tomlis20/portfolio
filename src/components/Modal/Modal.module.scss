@@ -1,0 +1,185 @@
+.modal {
+    $this: &;
+
+    position: fixed;
+    z-index: 2000000;
+
+    max-width: 600px;
+    width: calc(100vw - 32px);
+    height: auto;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    overflow: hidden;
+
+    background: #fff;
+    border-radius: 8px;
+
+    @media screen and (min-width: 768px) {
+        width: calc(100vw - 64px);
+    }
+
+    &--type-wide {
+        max-width: 1260px;
+
+        #{$this}__content {
+            @media screen and (min-width: 768px) {
+                max-height: min(600px, calc(100dvh - 64px));
+                padding: 64px;
+            }
+
+            @media screen and (min-width: 1280px) {
+                max-height: min(600px, calc(100dvh - 96px));
+                padding: 96px;
+            }
+        }
+    }
+
+    &--type-full {
+        max-width: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+            top: 96px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: none;
+        }
+
+        #{$this}__content {
+            @media screen and (min-width: 768px) {
+                max-height: 100%;
+                padding: 64px;
+            }
+
+            @media screen and (min-width: 1280px) {
+                padding: 96px;
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        min-height: 96px;
+        max-height: min(600px, calc(100dvh - 32px));
+        padding: 48px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        
+        > * {
+            max-width: 100%;
+        }
+    }
+
+    &--no-scroll &__content {
+        height: 100%;
+        max-height: calc(100dvh - 32px);
+    }
+
+    &--no-gutters &__content {
+        padding: 0;
+    }
+
+    &__close {
+        width: 32px;
+        height: 32px;
+        border: 1px solid #fafafa;
+        border-radius: 360px;
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        background: #f1f1f1;
+        cursor: pointer;
+        padding: 0;
+        display: inline-grid;
+        place-items: center;
+        z-index: 1000;
+    }
+}
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(#000, 0.2);
+}
+
+.modal-wrapper {
+    // Base styles
+    &.modal-wrapper--enter {
+        .modal-overlay {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .modal {
+            top: 60%;
+            opacity: 0;
+        }
+    }
+
+    &.modal-wrapper--enter-active {
+        .modal-overlay {
+            opacity: 0.7;
+            pointer-events: auto;
+        }
+        .modal {
+            top: 50%;
+            opacity: 1;
+
+            &--type-full {
+                @media screen and (min-width: 768px) {
+                    top: 96px;
+                }
+            }
+        }
+    }
+
+    &.modal-wrapper--exit {
+        .modal-overlay {
+            opacity: 0.7;
+            pointer-events: auto;
+        }
+        .modal {
+            top: 50%;
+            opacity: 1;
+        }
+    }
+
+    &.modal-wrapper--exit-active {
+
+        .modal-overlay {
+            opacity: 0;
+            pointer-events: none;
+        }
+		
+        .modal {
+            top: 60%;
+            opacity: 0;
+
+            &--type-full {
+                @media screen and (min-width: 768px) {
+                    top: 128px;
+                }
+            }
+        }
+    }
+}
+
+.modal .layout {
+    padding: 0;
+}
+
+.modal .layout--is-root + .layout--is-root {
+    margin-top: 32px;
+}

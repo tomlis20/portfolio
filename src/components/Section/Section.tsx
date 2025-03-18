@@ -4,12 +4,14 @@ import styles from './Section.module.scss'
 interface SectionProps {
     children: React.ReactNode
     id?: string
+    title?: string,
     className?: string
 }
 
-export default function Section({
+export function Section({
     children,
     id,
+    title,
     className = '',
 }: SectionProps) {
     return (
@@ -18,8 +20,11 @@ export default function Section({
             className={`${styles.section} ${className}`}
         >
             <div className={styles['section__container']}>
+                {title && <h2>{title}</h2>}
                 {children}
             </div>
         </section>
     )
 }
+
+export default Section;

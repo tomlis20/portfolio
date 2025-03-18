@@ -1,35 +1,12 @@
 .section {
-    width: 100%;
-    min-height: calc(100dvh - 32px);
-    
-    padding: 32px 0px;
-
-    background: #fafafa;
-
-    mask-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzgxOF82MikiPgogICAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJ4PSI4IiBmaWxsPSJibGFjayIvPgogICAgPC9nPgogICAgPGRlZnM+CiAgICAgICAgPGNsaXBQYXRoIGlkPSJjbGlwMF84MThfNjIiPgogICAgICAgICAgICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByeD0iOCIgZmlsbD0id2hpdGUiLz4KICAgICAgICA8L2NsaXBQYXRoPgogICAgPC9kZWZzPgo8L3N2Zz4KCg==);
-	mask-size: 100% 100%;
-	mask-position: center center;
-	mask-repeat: no-repeat;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @media screen and (min-width: 1068px) {
-        min-height: calc(100dvh - 64px);
-    }
 
     &__container {
-        width: 100%;
+        max-width: 1900px;
         margin: 0 auto;
-        padding: 0px 32px;
 
-        @media screen and (min-width: 1068px) {
-            padding: 0px 64px;
-        }
-
-        > *:not(:first-child) {
-            margin-top: 24px;
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
     }
+
 }
