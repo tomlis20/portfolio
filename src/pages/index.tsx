@@ -3,9 +3,9 @@ import { Section } from '@/components/Section'
 import { Grid } from '@/components/Grid'
 import { GridItem } from '@/components/Grid'
 import { Modal } from '@/components/Modal';
+import { Button } from '@/components/Button';
 
 import { ContentExchange } from '@/pages/content/exchange';
-import test from '../../public/test.jpg';
 
 export default function Home() {
     const [modalOpen, setModalOpen] = useState(false);
@@ -24,182 +24,136 @@ export default function Home() {
     return (
         <div>
             <main>
-                {/* Intro with Narrative */}
                 <Section id="bio">
-                    <h1>Hej 👋 I’m Tomasz</h1>
-                    <p>
-                        A Product Designer who blends design, code, and user insights to craft impactful solutions.
-                        Here’s how I solve problems and deliver value.
-                    </p>
+                    <h1>Hej 👋 I’m Tomasz!<br/>I design, code, and build for the Web.</h1>
                 </Section>
 
-                {/* Design Systems - Show Systems Thinking */}
                 <Section title={'Design Systems'}>
                     <Grid type="two">
-                        <GridItem image={test} onClick={() => openModal(<ContentExchange />)}>
+                        <GridItem onClick={() => openModal(<ContentExchange />)}>
                             <h3>Exchanges</h3>
-                            <p>Built a multi-brand design system to unify 5+ platforms, improving dev handoff by 30%.</p>
-                            <button onClick={() => openModal(<ContentExchange />)}>See Case Study +</button>
+                            <p>Two brands. One system.</p>
+                            <Button onClick={() => openModal(<ContentExchange />)}>Explore</Button>
                         </GridItem>
                         <GridItem>
                             <h3>NerdCow</h3>
-                            <p>Created a scalable design system for my agency, streamlining client projects.</p>
-                            <button>See Components +</button>
+                            <p>Visual language for my company.</p>
+                            <Button onClick={() => openModal(<ContentExchange />)}>Explore</Button>
                         </GridItem>
                     </Grid>
                     <Grid type="two">
                         <GridItem>
                             <h3>Repositive</h3>
-                            <p>Built a multi-brand design system to unify 5+ platforms, improving dev handoff by 30%.</p>
-                            <button>See Case Study +</button>
+                            <p>Design backbone for a tech startup.</p>
+                            <Button onClick={() => openModal(<ContentExchange />)}>Explore</Button>
                         </GridItem>
                         <GridItem>
                             <h3>Views</h3>
-                            <p>Created a scalable design system for my agency, streamlining client projects.</p>
-                            <button>See Components +</button>
+                            <p>Smart design to build trust.</p>
+                            <Button onClick={() => openModal(<ContentExchange />)}>Explore</Button>
                         </GridItem>
                     </Grid>
                     <Grid type="two">
                         <GridItem>
                             <h3>Doddle</h3>
-                            <p>Built a multi-brand design system to unify 5+ platforms, improving dev handoff by 30%.</p>
-                            <button>See Case Study +</button>
+                            <p>Simple system for a complex brand.</p>
+                            <Button onClick={() => openModal(<ContentExchange />)}>Explore</Button>
                         </GridItem>
                         <GridItem>
                             <h3>Aether</h3>
-                            <p>Created a scalable design system for my agency, streamlining client projects.</p>
-                            <button>See Components +</button>
+                            <p>Foundations for a Rolls Royce&apos;s company.</p>
+                            <Button onClick={() => openModal(<ContentExchange />)}>Explore</Button>
                         </GridItem>
                     </Grid>
                 </Section>
 
-                {/* Ideation - Highlight Prototyping & Research */}
-                <Section title={'Ideation & Prototyping'}>
-                    <Grid type="five">
+                <Section title={'Ideation'}>
+                    <Grid type="one">
                         <GridItem>
-                            <h3>Risk Assurance App</h3>
-                            <p>Designed and tested a mobile app for construction risk management in 8 hours.</p>
-                            <button>See Prototype +</button>
-                        </GridItem>
-                        <GridItem>
-                            <h3>Carrier Platform</h3>
-                            <p>Rapid prototype for an enterprise tool, validated with user interviews.</p>
-                            <button>See Process +</button>
-                        </GridItem>
-                        <GridItem>
-                            <h3>Design Sprints</h3>
-                            <p>Facilitated workshops to ideate and test solutions in 5 days.</p>
+                            <h3>Design sprints</h3>
+                            <p>Facilitated 20+ design sprints to ideate and test solutions in 5 days.</p>
                             <button>See Results +</button>
                         </GridItem>
+                    </Grid>
+                    <Grid type="three">
                         <GridItem>
-                            <h3>24-Hour Chat App</h3>
-                            <p>Built a minimal chat UI with real-time updates in a weekend.</p>
+                            <h3>Example prototypes</h3>
+                            <p>Challenged myself to design each website prototype in under 8 hours.</p>
                             <button>See Prototype +</button>
                         </GridItem>
                         <GridItem>
-                            <h3>User Flow Sketch</h3>
-                            <p>Mapped a signup journey for a SaaS tool in 2012.</p>
-                            <button>See Scan +</button>
+                            <h3>User tests</h3>
+                            <p>Recruited participants and moderated user tests to ask for feedback.</p>
+                            <button>See Prototype +</button>
                         </GridItem>
                         <GridItem>
-                            <h3>Custom Hook</h3>
-                            <p>A useForm hook shared on GitHub in 2020.</p>
-                            <button>See Repo +</button>
+                            <h3>Solution sketches</h3>
+                            <p>Sketched solutions to solve website challenges. Pen and paper, baby!</p>
+                            <button>See Scan +</button>
                         </GridItem>
                     </Grid>
                 </Section>
 
-                {/* Websites - Focus on User Experience */}
                 <Section title={'Web Experiences'}>
                     <Grid type="two">
                         <GridItem>
-                            <h3>Real Estate Platform</h3>
-                            <p>Designed a visually stunning site with smooth animations to boost property engagement.</p>
+                            <h3>Real Estate Property Map</h3>
+                            <p>So much fun doing this one. Plenty of motion design done around the site!</p>
                             <button>See Live Site +</button>
                         </GridItem>
                         <GridItem>
-                            <h3>Portfolio Site</h3>
-                            <p>Crafted a personal site (this one!) to showcase my design and dev skills.</p>
+                            <h3>World With Web</h3>
+                            <p>Started the only website certificate that isn&apos;t popularity contest.</p>
                             <button>See Code +</button>
                         </GridItem>
                     </Grid>
                     <Grid type="two">
                         <GridItem>
-                            <h3>Real Estate Platform</h3>
-                            <p>Designed a visually stunning site with smooth animations to boost property engagement.</p>
+                            <h3>Web Design Agency Site</h3>
+                            <p>Big part of my life for 10 years. Proud to share this. Psst... Hidden gem inside.</p>
                             <button>See Live Site +</button>
                         </GridItem>
                         <GridItem>
-                            <h3>Dashboard Redesign</h3>
-                            <p>Revamped a cluttered analytics UI from 2015 for better usability.</p>
-                            <button>See Sketch +</button>
-                        </GridItem>
-                    </Grid>
-                    <Grid type="one">
-                        <GridItem>
-                            <h3>E-commerce Overhaul</h3>
-                            <p>Modernized a 2008 checkout flow for better conversions.</p>
-                            <button>See Comparison +</button>
+                            <h3>Brochure Landing Page</h3>
+                            <p>Simple landing page for an asset management company.</p>
+                            <button>See Code +</button>
                         </GridItem>
                     </Grid>
                 </Section>
 
-                {/* Motion - Add Visual Flair */}
-                <Section title={'Motion Design'}>
-                    <Grid type="two">
-                        <GridItem>
-                            <h3>Animated Icons</h3>
-                            <p>Custom SVG icons with subtle animations for enhanced UX.</p>
-                            <button>See Collection +</button>
-                        </GridItem>
-                        <GridItem>
-                            <h3>UI Transitions</h3>
-                            <p>Prototyped micro-interactions to elevate product feel.</p>
-                            <button>See Demo +</button>
-                        </GridItem>
-                        <GridItem>
-                            <h3>Button States</h3>
-                            <p>Crafted 10+ hover effects for a 2019 project.</p>
-                            <button>See Demo +</button>
-                        </GridItem>
-                    </Grid>
-                </Section>
-
-                {/* Exploration - Contextualize Misc */}
-                <Section title={'Exploration & Tools'}>
+                <Section title={'Exploration'}>
                     <Grid type="five">
                         <GridItem>
-                            <h3>Site Audit Tool</h3>
-                            <p>Built a crawler to score site health, aiding UX improvements.</p>
+                            <h3>Site audit tool</h3>
+                            <p>Attempted to build a crawler to score site&apos;s health, aiding UX improvements.</p>
                         </GridItem>
                         <GridItem>
-                            <h3>Pixel Art Tiles</h3>
-                            <p>Designed 50+ sprites for a retro game concept.</p>
+                            <h3>Pixel art</h3>
+                            <p>Newly-found passion. Big message in small squares.</p>
                             <button>See Gallery +</button>
                         </GridItem>
                         <GridItem>
                             <h3>NFT Generator</h3>
-                            <p>Experimented with generative art for fun.</p>
+                            <p>Flashback to 2021. I built script to generate 1000 NFTs.</p>
                         </GridItem>
                         <GridItem>
-                            <h3>WP Boilerplate</h3>
-                            <p>Streamlined WordPress theme dev.</p>
+                            <h3>WordPress Boilerplate</h3>
+                            <p>Streamlined WordPress theme for development.</p>
                         </GridItem>
                         <GridItem>
                             <h3>Whitepaper</h3>
-                            <p>Designed a sleek editorial PDF.</p>
+                            <p>Designed a sleek PDF.</p>
                         </GridItem>
                     </Grid>
                     <Grid type="one">
                         <GridItem>
-                            <h3>Grid Layout Generator</h3>
-                            <p>A 2018 tool to visualize CSS Grid layouts dynamically.</p>
+                            <h3>Published a book</h3>
+                            <p>Ha! Bet you didn&apos;t expect that.</p>
                             <button>See Code +</button>
                         </GridItem>
                     </Grid>
                 </Section>
 
-                {/* Closing CTA */}
                 <Section id="contact">
                     <h2>Let’s Build Something Great</h2>
                     <p>
