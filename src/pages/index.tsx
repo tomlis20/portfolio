@@ -22,6 +22,8 @@ import { SiteNerdCow } from '@/pages/content/sites/nerdcow';
 import { SiteAether } from '@/pages/content/sites/aether';
 
 // Exploration.
+import { ExplorationWhitepaper } from '@/pages/content/exploration/whitepaper';
+import { ExplorationBook } from '@/pages/content/exploration/book';
 
 // Grid images.
 import imageExchange from '../../public/exchange@2x.jpg';
@@ -160,10 +162,10 @@ export default function Home() {
 
                 <Section title={'📍 Exploration'}>
                     <Grid type="five">
-                        <GridItem image={imageBook}>
+                        <GridItem image={imageBook} onClick={() => openModal(<ExplorationBook />)}>
                             <h3>My book</h3>
                             <p>Self-published a book in 2017.</p>
-                            <Button onClick={() => openModal('')}>See inside</Button>
+                            <Button onClick={() => openModal(<ExplorationBook />)}>Peek inside</Button>
                         </GridItem>
                         <GridItem image={imagePixelArt} inverted={true}>
                             <h3>Pixel art</h3>
@@ -173,17 +175,17 @@ export default function Home() {
                         <GridItem image={imageNfts}>
                             <h3>NFT Generator</h3>
                             <p>Flashback to 2021. I built a script to generate 500 NFTs.</p>
-                            <Button icon={'external'} onClick={() => window.open('https://opensea.io/collection/cryptonippls', '_blank')}>Open tab</Button>
+                            <Button icon={'external'} onClick={() => window.open('https://opensea.io/collection/cryptonippls', '_blank')}>Open it</Button>
                         </GridItem>
-                        <GridItem image={imageWpTheme} inverted={true}>
+                        <GridItem image={imageWpTheme} inverted={true} onClick={() => window.open('https://github.com/tomlis20/wordpress-theme/tree/main/wp-content/nerdcow', '_blank')}>
                             <h3>WordPress Boilerplate</h3>
                             <p>Streamlined WordPress theme for development.</p>
-                            <Button onClick={() => openModal('')} inverted={true}>See repo</Button>
+                            <Button icon={'external'} inverted={true} onClick={() => window.open('https://github.com/tomlis20/wordpress-theme/tree/main/wp-content/nerdcow', '_blank')}>See repo</Button>
                         </GridItem>
-                        <GridItem image={imageWhitepaper}>
+                        <GridItem image={imageWhitepaper} onClick={() => openModal(<ExplorationWhitepaper />)}>
                             <h3>Whitepaper</h3>
                             <p>Designed a sleek PDF.</p>
-                            <Button onClick={() => openModal('')}>Read it</Button>
+                            <Button onClick={() => openModal(<ExplorationWhitepaper />)}>Read it</Button>
                         </GridItem>
                     </Grid>
                 </Section>
