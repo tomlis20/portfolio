@@ -4,6 +4,7 @@ import styles from './Button.module.scss';
 
 interface ButtonProps {
     icon?: 'internal' | 'external';
+    primary?: boolean;
     children?: React.ReactNode;
     className?: string;
     [key: string]: unknown;
@@ -27,7 +28,8 @@ const NewTabIcon = () => {
 
 export function Button({
     children = null,
-    inverted,
+    inverted = false,
+    primary = false,
     icon = 'internal',
     className = '',
     ...props
@@ -36,7 +38,8 @@ export function Button({
         styles.button,
         {
             [styles['button--is-inverted']]: inverted,
-            [styles['button--is-external']]: icon === 'external'
+            [styles['button--is-external']]: icon === 'external',
+            [styles['button--is-primary']]: primary
         },
         className
     );

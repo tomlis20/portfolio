@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import Image, { StaticImageData } from 'next/image'; // Import StaticImageData type
+import Image, { StaticImageData } from 'next/image';
 import styles from './Grid.module.scss';
 
 interface GridItemProps extends React.HTMLAttributes<HTMLDivElement> {

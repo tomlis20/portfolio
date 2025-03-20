@@ -1,5 +1,10 @@
 .section {
     display: block;
+    padding: 32px 0px;
+  
+    @media screen and (min-width: 1068px) {
+    	padding: 48px 0px;
+    }
 
     &__container {
         max-width: 1900px;
@@ -8,6 +13,12 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
+
+        padding: 0px 32px;
+        
+        @media screen and (min-width: 1068px) {
+            padding: 0px 48px;
+        }
 
         > h2 {
             position: sticky;
@@ -18,7 +29,7 @@
             margin: -16px 0px;
 
             &:before {
-                width: 100vw;
+                width: 120vw;
                 height: 100%;
 
                 position: absolute;
