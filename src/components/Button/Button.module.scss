@@ -11,7 +11,7 @@
 	width: fit-content;
 	max-width: 100%;
 
-    border: 2px solid #007EA7;
+    border: 2px solid #000;
     background: none;
 
 	padding: 0 24px 0 32px;
@@ -32,7 +32,7 @@
 	}
 
     &:hover {
-        background: rgba( #007EA7, 0.08 );
+        background: rgba( #000, 0.08 );
 
         svg {
             transform: rotate(90deg);
@@ -43,5 +43,24 @@
         width: 24px;
         height: 24px;
         transition: 150ms ease-in-out all;
+    }
+
+    &--is-inverted {
+        border-color: #fff;
+        color: white;
+
+        &:hover {
+            background: rgba( #fff, 0.08 );
+        }
+
+        path {
+            
+        }
+    }
+
+    &--is-external:hover {
+        svg {
+            transform: translate(4px, -4px) !important;
+        }
     }
 }

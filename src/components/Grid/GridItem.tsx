@@ -5,12 +5,14 @@ import styles from './Grid.module.scss';
 
 interface GridItemProps extends React.HTMLAttributes<HTMLDivElement> {
     image?: string | StaticImageData; // Accept both string and StaticImageData
+    inverted?: boolean;
     children?: React.ReactNode;
     className?: string;
 }
 
 export function GridItem({
     image,
+    inverted,
     children = null,
     className = '',
     ...props
@@ -18,7 +20,7 @@ export function GridItem({
     const classNames = cn(
         styles.grid__item,
         {
-            [styles['grid__item--has-image']]: image,
+            [styles['grid__item--is-inverted']]: inverted
         },
         className
     );

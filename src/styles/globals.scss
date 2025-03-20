@@ -2,7 +2,7 @@ body {
     font-size: 1rem;
 	line-height: 1.4;
     font-weight: 400;
-    background: #f1f1f1;
+    background: #F5F5F7;
     padding: 16px;
   
     @media screen and (min-width: 1068px) {
@@ -14,10 +14,10 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 64px;
   
     @media screen and (min-width: 1068px) {
-    	gap: 64px;
+    	gap: 96px;
     }
 }
   
