@@ -109,24 +109,24 @@ export default function Home() {
                         <GridItem image={imageDesignSprint}>
                             <h3>Design sprints</h3>
                             <p>Facilitated 20+ design sprints to ideate and test solutions in 5 days.</p>
-                            <Button onClick={() => openModal(<ContentExchange />)}>Explore</Button>
+                            <Button onClick={() => openModal('')}>Explore</Button>
                         </GridItem>
                     </Grid>
                     <Grid type="three">
                         <GridItem image={imagePrototype}>
                             <h3>Example prototype</h3>
                             <p>Challenged myself to design each website prototype in under 8 hours.</p>
-                            <Button onClick={() => openModal(<ContentExchange />)}>Explore</Button>
+                            <Button onClick={() => openModal('')}>Explore</Button>
                         </GridItem>
                         <GridItem image={imageUserTests}>
                             <h3>User tests</h3>
                             <p>Recruited participants and moderated user tests to ask for feedback.</p>
-                            <Button onClick={() => openModal(<ContentExchange />)}>Explore</Button>
+                            <Button onClick={() => openModal('')}>Explore</Button>
                         </GridItem>
                         <GridItem image={imageSketches}>
                             <h3>Solution sketches</h3>
                             <p>Sketched solutions to solve website challenges. Pen and paper, baby!</p>
-                            <Button onClick={() => openModal(<ContentExchange />)}>Explore</Button>
+                            <Button onClick={() => openModal('')}>Explore</Button>
                         </GridItem>
                     </Grid>
                 </Section>
@@ -163,12 +163,12 @@ export default function Home() {
                         <GridItem image={imageBook}>
                             <h3>My book</h3>
                             <p>Self-published a book in 2017.</p>
-                            <Button onClick={() => openModal(<ContentExchange />)}>See inside</Button>
+                            <Button onClick={() => openModal('')}>See inside</Button>
                         </GridItem>
                         <GridItem image={imagePixelArt} inverted={true}>
                             <h3>Pixel art</h3>
                             <p>Newly-found passion. Big message in small squares.</p>
-                            <Button onClick={() => openModal(<ContentExchange />)} inverted={true}>Explore</Button>
+                            <Button onClick={() => openModal('')} inverted={true}>Explore</Button>
                         </GridItem>
                         <GridItem image={imageNfts}>
                             <h3>NFT Generator</h3>
@@ -178,12 +178,12 @@ export default function Home() {
                         <GridItem image={imageWpTheme} inverted={true}>
                             <h3>WordPress Boilerplate</h3>
                             <p>Streamlined WordPress theme for development.</p>
-                            <Button onClick={() => openModal(<ContentExchange />)} inverted={true}>See repo</Button>
+                            <Button onClick={() => openModal('')} inverted={true}>See repo</Button>
                         </GridItem>
                         <GridItem image={imageWhitepaper}>
                             <h3>Whitepaper</h3>
                             <p>Designed a sleek PDF.</p>
-                            <Button onClick={() => openModal(<ContentExchange />)}>Read it</Button>
+                            <Button onClick={() => openModal('')}>Read it</Button>
                         </GridItem>
                     </Grid>
                 </Section>
