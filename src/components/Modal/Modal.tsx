@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, RefObject } from 'react';
+import React, { useEffect, useRef } from 'react';
 import ReactPortal from '../Portal';
 import cn from 'classnames';
 import { CSSTransition } from 'react-transition-group';
@@ -14,7 +14,11 @@ interface ModalProps {
     disableGutters?: boolean;
 }
 
-const CloseButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = (props) => {
+interface CloseButtonProps {
+    onClick: () => void;
+}
+
+const CloseButton = ({...props}: CloseButtonProps) => {
     return (
         <button className={styles['modal__close']} {...props}>
             <span>X</span>
@@ -44,7 +48,7 @@ export function Modal({
         document.body.style.overflow = isOpen ? 'hidden' : 'unset';
     }, [isOpen]);
 
-    const nodeRef: RefObject<HTMLDivElement> = useRef(null);
+    const nodeRef = useRef(null);
 
     const modalClassNames = cn(
         styles.modal,

@@ -16,7 +16,7 @@ interface ReactPortalProps {
 function ReactPortal({
     children,
     wrapperId = 'react-portal-wrapper'
-}: ReactPortalProps): JSX.Element | null {
+}: ReactPortalProps) {
     const [wrapperElement, setWrapperElement] = useState<HTMLDivElement | null>(null);
 
     useLayoutEffect(() => {
