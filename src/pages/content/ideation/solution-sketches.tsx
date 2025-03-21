@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import imageSketch1 from '/public/solution-sketch-1.png';
 import imageSketch2 from '/public/solution-sketch-2.jpg';
-import imageSketch3 from '/public/solution-sketch-3.jpg';
+import imageSketch3 from '/public/solution-sketch-last.jpg';
 
 export const IdeationSolutionSketches = () => {
     return (
