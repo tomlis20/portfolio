@@ -4,6 +4,12 @@ import { Grid } from '@/components/Grid'
 import { GridItem } from '@/components/Grid'
 import { Modal } from '@/components/Modal';
 import { Button } from '@/components/Button';
+import { VideoButton } from '@/components/VideoButton';
+
+// Bio
+import { BioVideo } from '@/pages/content/bio/video';
+import { BioResume } from '@/pages/content/bio/resume';
+import { BioCoverLetter } from '@/pages/content/bio/cover-letter';
 
 // Design systems.
 import { DesignSystemExchange } from '@/pages/content/design-systems/exchange';
@@ -69,15 +75,39 @@ export default function Home() {
         <div>
             <main>
                 <Section id="bio">
-                    <h1>Hej 👋 I&apos;m Tomasz! I design, code, and build for the Web.</h1>
-                    <p>I&apos;m all about shipping stuff that works, no fluff.</p>
+                    <h1>Hej 👋 I&apos;m Tomasz! I design, code, and build for the Web. </h1>
                     <div style={{display: 'flex', flexWrap: 'wrap', gap: 16}}>
-                        <Button primary={true}>Read my resume</Button>
-                        <Button primary={true}>Read my cover letter</Button>
-                        <Button icon='external' onClick={() => window.open('https://www.linkedin.com/in/tomaszlisiecki/', '_blank')}>Meet me on LinkedIn</Button>
-                        <Button icon='external' onClick={() => window.open('https://www.youtube.com/watch?v=BkVLIlLbsIY&list=PLPZ893eqycAeT41i12xD3mSEpxOKuMqAG', '_blank')}>Listen to my podcast</Button>
-                        <Button icon='external' onClick={() => window.open('https://github.com/tomlis20', '_blank')}>Visit my Github</Button>
+                        <VideoButton onClick={() => openModal(<BioVideo />)}/>
+                        <Button onClick={() => openModal(<BioResume />)} primary={true}>Read my resume</Button>
+                        <Button onClick={() => openModal(<BioCoverLetter />)} primary={true}>Read my cover letter</Button>
                     </div>
+                </Section>
+
+                <Section title={'💡 Ideation'}>
+                    <Grid type="one">
+                        <GridItem image={imageDesignSprint} onClick={() => openModal(<IdeationDesignSprints />)}>
+                            <h3>Design sprints</h3>
+                            <p>Facilitated 20+ design sprints to ideate and test solutions in 5 days.</p>
+                            <Button onClick={() => openModal(<IdeationDesignSprints />)}>Learn more</Button>
+                        </GridItem>
+                    </Grid>
+                    <Grid type="three">
+                        <GridItem image={imagePrototype} onClick={() => openModal(<IdeationPrototype />)}>
+                            <h3>Example prototype</h3>
+                            <p>Challenged myself to design each website prototype in under 8 hours.</p>
+                            <Button onClick={() => openModal(<IdeationPrototype />)}>Preview it</Button>
+                        </GridItem>
+                        <GridItem image={imageUserTests} onClick={() => openModal(<IdeationUserTests />)}>
+                            <h3>User tests</h3>
+                            <p>Recruited participants and moderated user tests to ask for feedback.</p>
+                            <Button onClick={() => openModal(<IdeationUserTests />)}>Watch me</Button>
+                        </GridItem>
+                        <GridItem image={imageSketches} onClick={() => openModal(<IdeationSolutionSketches />)}>
+                            <h3>Solution sketches</h3>
+                            <p>Sketched solutions to solve website challenges. Pen and paper, baby!</p>
+                            <Button onClick={() => openModal(<IdeationSolutionSketches />)}>Take a look</Button>
+                        </GridItem>
+                    </Grid>
                 </Section>
 
                 <Section title={'🖌️ Design Systems'}>
@@ -119,33 +149,6 @@ export default function Home() {
                     </Grid>
                 </Section>
 
-                <Section title={'💡 Ideation'}>
-                    <Grid type="one">
-                        <GridItem image={imageDesignSprint} onClick={() => openModal(<IdeationDesignSprints />)}>
-                            <h3>Design sprints</h3>
-                            <p>Facilitated 20+ design sprints to ideate and test solutions in 5 days.</p>
-                            <Button onClick={() => openModal(<IdeationDesignSprints />)}>Learn more</Button>
-                        </GridItem>
-                    </Grid>
-                    <Grid type="three">
-                        <GridItem image={imagePrototype} onClick={() => openModal(<IdeationPrototype />)}>
-                            <h3>Example prototype</h3>
-                            <p>Challenged myself to design each website prototype in under 8 hours.</p>
-                            <Button onClick={() => openModal(<IdeationPrototype />)}>Preview it</Button>
-                        </GridItem>
-                        <GridItem image={imageUserTests} onClick={() => openModal(<IdeationUserTests />)}>
-                            <h3>User tests</h3>
-                            <p>Recruited participants and moderated user tests to ask for feedback.</p>
-                            <Button onClick={() => openModal(<IdeationUserTests />)}>Watch me</Button>
-                        </GridItem>
-                        <GridItem image={imageSketches} onClick={() => openModal(<IdeationSolutionSketches />)}>
-                            <h3>Solution sketches</h3>
-                            <p>Sketched solutions to solve website challenges. Pen and paper, baby!</p>
-                            <Button onClick={() => openModal(<IdeationSolutionSketches />)}>Take a look</Button>
-                        </GridItem>
-                    </Grid>
-                </Section>
-
                 <Section title={'👀 Web Experiences'}>
                     <Grid type="two">
                         <GridItem image={imageMaps} onClick={() => openModal(<SiteViews />)}>
@@ -177,7 +180,7 @@ export default function Home() {
                     <Grid type="five">
                         <GridItem image={imageBook} onClick={() => openModal(<ExplorationBook />)}>
                             <h3>My book</h3>
-                            <p>Learned self-publishing the hard way.</p>
+                            <p>Learned publishing the hard way.</p>
                             <Button onClick={() => openModal(<ExplorationBook />)}>Peek inside</Button>
                         </GridItem>
                         <GridItem image={imagePixelArt} inverted={true} onClick={() => openModal(<ExplorationPixelArt />)}>
@@ -185,7 +188,7 @@ export default function Home() {
                             <p>Newly-found passion. Big message in small squares.</p>
                             <Button onClick={() => openModal(<ExplorationPixelArt />)} inverted={true}>Explore</Button>
                         </GridItem>
-                        <GridItem image={imageNfts}>
+                        <GridItem image={imageNfts} onClick={() => window.open('https://opensea.io/collection/cryptonippls', '_blank')}>
                             <h3>NFT Generator</h3>
                             <p>Flashback to 2021. I built a script to generate 500 NFTs.</p>
                             <Button icon={'external'} onClick={() => window.open('https://opensea.io/collection/cryptonippls', '_blank')}>Open it</Button>
@@ -204,7 +207,12 @@ export default function Home() {
                 </Section>
 
                 <Section id="contact">
-                    <h2>That&apos;s me in a pill 😊</h2>
+                    <h2>That&apos;s me in a pill 😊 Dziękuję!</h2>
+                    <div style={{display: 'flex', flexWrap: 'wrap', gap: 16}}>
+                        <Button icon='external' onClick={() => window.open('https://www.linkedin.com/in/tomaszlisiecki/', '_blank')}>Meet me on LinkedIn</Button>
+                        <Button icon='external' onClick={() => window.open('https://www.youtube.com/watch?v=BkVLIlLbsIY&list=PLPZ893eqycAeT41i12xD3mSEpxOKuMqAG', '_blank')}>Listen to my podcast</Button>
+                        <Button icon='external' onClick={() => window.open('https://github.com/tomlis20', '_blank')}>Visit my Github</Button>
+                    </div>
                     <p>
                         Made for 37signals
                     </p>
