@@ -1,6 +1,6 @@
 import { Section } from '@/components/Section';
 import Image from 'next/image';
-import imageSnacks from '/public/snacks.jpeg';
+import imageSnacks from '@public/snacks.jpeg';
 
 export const IdeationDesignSprints = () => {
     return (

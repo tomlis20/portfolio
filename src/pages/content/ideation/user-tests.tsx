@@ -1,6 +1,6 @@
 import { Section } from '@/components/Section';
 import Image from 'next/image';
-import imageWallJustice from '/public/wall-justice.jpg';
+import imageWallJustice from '@public/wall-justice.jpg';
 
 export const IdeationUserTests = () => {
     return (

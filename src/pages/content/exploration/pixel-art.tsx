@@ -1,8 +1,8 @@
 import { Section } from '@/components/Section';
 import Image from 'next/image';
-import imagePixelArt1 from '/public/pixel-art-1.jpg';
-import imagePixelArt2 from '/public/pixel-art-2.jpg';
-import imagePixelArt3 from '/public/pixel-art-3.jpg';
+import imagePixelArt1 from '@public/pixel-art-1.jpg';
+import imagePixelArt2 from '@public/pixel-art-2.jpg';
+import imagePixelArt3 from '@public/pixel-art-3.jpg';
 
 export const ExplorationPixelArt = () => {
     return (

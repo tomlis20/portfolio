@@ -15,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -26,7 +26,10 @@
     "paths": {
       "@/*": [
         "*"
-      ] // Changed from "./src/*" to "*" since baseUrl is already "src"
+      ],
+      "@public/*": [
+        "../public/*"
+      ]
     }
   },
   "include": [
