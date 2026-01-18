@@ -214,7 +214,7 @@ export default function Home() {
                         <Button icon='external' onClick={() => window.open('https://github.com/tomlis20', '_blank')}>Visit my Github</Button>
                     </div>
                     <p>
-                        Made for 37signals
+                        Made for PayPay
                     </p>
                 </Section>
             </main>
