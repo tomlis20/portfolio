@@ -13,7 +13,7 @@ import { BioCoverLetter } from '@/pages/content/bio/cover-letter';
 
 // Design systems.
 import { DesignSystemExchange } from '@/pages/content/design-systems/exchange';
-import { DesignSystemNerdCow } from '@/pages/content/design-systems/nerdcow';
+import { DesignSystemTeg } from '@/pages/content/design-systems/teg';
 import { DesignSystemRepositive } from '@/pages/content/design-systems/repositive';
 import { DesignSystemViews } from '@/pages/content/design-systems/views';
 import { DesignSystemDoddle } from '@/pages/content/design-systems/doddle';
@@ -53,9 +53,11 @@ import imageNerdcow2 from '../../public/nerdcow2@2x.jpg';
 import imageAether from '../../public/aether@2x.jpg';
 import imagePixelArt from '../../public/pixel-art@2x.jpg';
 import imageNfts from '../../public/nfts@2x.jpg';
+import imageTio from '../../public/tio@2x.jpg';
 import imageWpTheme from '../../public/wp-theme@2x.jpg';
 import imageWhitepaper from '../../public/whitepaper@2x.jpg';
 import imageBook from '../../public/book@2x.jpg';
+import imageTeg from '../../public/teg@2x.jpg';
 
 export default function Home() {
     const [modalOpen, setModalOpen] = useState(false);
@@ -79,6 +81,7 @@ export default function Home() {
                 </Section>
 
                 <Section title={'💡 Ideation'}>
+                    <p>I turn vague ideas into validated directions fast through rapid prototyping, user testing, and collaborative sprints - de-risking concepts early and saving teams weeks of rework.</p>
                     <Grid type="one">
                         <GridItem image={imageDesignSprint} onClick={() => openModal(<IdeationDesignSprints />)}>
                             <h3>Design sprints</h3>
@@ -106,16 +109,17 @@ export default function Home() {
                 </Section>
 
                 <Section title={'🖌️ Design Systems'}>
+                    <p>I create scalable, intelligent design systems that unify brands, speed up delivery by 50%+, reduce handoff friction, and let teams ship consistent, high-trust experiences at scale.</p>
                     <Grid type="two">
                         <GridItem image={imageExchange} onClick={() => openModal(<DesignSystemExchange />)}>
                             <h3>Exchanges</h3>
                             <p>Two brands. One system.</p>
                             <Button onClick={() => openModal(<DesignSystemExchange />)}>See Figma</Button>
                         </GridItem>
-                        <GridItem image={imageNerdcow} onClick={() => openModal(<DesignSystemNerdCow />)}>
-                            <h3>NerdCow</h3>
-                            <p>Visual language for my company.</p>
-                            <Button onClick={() => openModal(<DesignSystemNerdCow />)}>See Figma</Button>
+                        <GridItem image={imageTeg} onClick={() => openModal(<DesignSystemTeg />)}>
+                            <h3>TEG</h3>
+                            <p>Enterprise logistics tech company.</p>
+                            <Button onClick={() => openModal(<DesignSystemTeg />)}>See Figma</Button>
                         </GridItem>
                     </Grid>
                     <Grid type="two">
@@ -145,6 +149,7 @@ export default function Home() {
                 </Section>
 
                 <Section title={'👀 Web Experiences'}>
+                    <p>I build immersive, motion-rich web interfaces that feel alive and intuitive - driving higher engagement, stronger brand perception, and memorable user delight.</p>
                     <Grid type="two">
                         <GridItem image={imageMaps} onClick={() => openModal(<SiteViews />)}>
                             <h3>Real Estate Property Map</h3>
@@ -172,6 +177,7 @@ export default function Home() {
                 </Section>
 
                 <Section title={'📍 Exploration'}>
+                    <p>I keep my creative edge sharp through personal experiments like micro apps, alternative art styles, and, honestly, whatever I find interesting - these side projects fuel fresh ideas, push new techniques, and bring innovative thinking back to client work.</p>
                     <Grid type="five">
                         <GridItem image={imageBook} onClick={() => openModal(<ExplorationBook />)}>
                             <h3>My book</h3>
@@ -183,10 +189,10 @@ export default function Home() {
                             <p>Newly-found passion. Big message in small squares.</p>
                             <Button onClick={() => openModal(<ExplorationPixelArt />)} inverted={true}>Explore</Button>
                         </GridItem>
-                        <GridItem image={imageNfts} onClick={() => window.open('https://opensea.io/collection/cryptonippls', '_blank')}>
-                            <h3>NFT Generator</h3>
-                            <p>Flashback to 2021. I built a script to generate 500 NFTs.</p>
-                            <Button icon={'external'} onClick={() => window.open('https://opensea.io/collection/cryptonippls', '_blank')}>Open it</Button>
+                        <GridItem image={imageTio} onClick={() => window.open('https://theimageoptimizer.com', '_blank')}>
+                            <h3>The Image Optimizer</h3>
+                            <p>Built the best image optimizer for Web.</p>
+                            <Button icon={'external'} onClick={() => window.open('https://theimageoptimizer.com', '_blank')}>Open it</Button>
                         </GridItem>
                         <GridItem image={imageWpTheme} inverted={true} onClick={() => window.open('https://github.com/tomlis20/wordpress-theme/tree/main/wp-content/nerdcow', '_blank')}>
                             <h3>WordPress Boilerplate</h3>
@@ -202,14 +208,14 @@ export default function Home() {
                 </Section>
 
                 <Section id="contact">
-                    <h2>That&apos;s me in a pill 😊 Dziękuję!</h2>
+                    <h2>That&apos;s me in a pill 😊 Dziękuję! 🇵🇱</h2>
                     <div style={{display: 'flex', flexWrap: 'wrap', gap: 16}}>
                         <Button icon='external' onClick={() => window.open('https://www.linkedin.com/in/tomaszlisiecki/', '_blank')}>Meet me on LinkedIn</Button>
                         <Button icon='external' onClick={() => window.open('https://www.youtube.com/watch?v=BkVLIlLbsIY&list=PLPZ893eqycAeT41i12xD3mSEpxOKuMqAG', '_blank')}>Listen to my podcast</Button>
                         <Button icon='external' onClick={() => window.open('https://github.com/tomlis20', '_blank')}>Visit my Github</Button>
                     </div>
                     <p>
-                        Made for PayPay
+                        Made with ❤️ for Web
                     </p>
                 </Section>
             </main>
