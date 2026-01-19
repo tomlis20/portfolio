@@ -38,7 +38,6 @@ import { ExplorationPixelArt } from '@/pages/content/exploration/pixel-art';
 
 // Grid images.
 import imageExchange from '../../public/exchange@2x.jpg';
-import imageNerdcow from '../../public/nerdcow@2x.jpg';
 import imageViews from '../../public/views@2x.jpg';
 import imageRepositive from '../../public/repositive@2x.jpg';
 import imageDoddle from '../../public/doddle@2x.jpg';
@@ -52,7 +51,6 @@ import imageWww from '../../public/www@2x.jpg';
 import imageNerdcow2 from '../../public/nerdcow2@2x.jpg';
 import imageAether from '../../public/aether@2x.jpg';
 import imagePixelArt from '../../public/pixel-art@2x.jpg';
-import imageNfts from '../../public/nfts@2x.jpg';
 import imageTio from '../../public/tio@2x.jpg';
 import imageWpTheme from '../../public/wp-theme@2x.jpg';
 import imageWhitepaper from '../../public/whitepaper@2x.jpg';
@@ -78,6 +76,11 @@ export default function Home() {
             <main>
                 <Section id="bio">
                     <h1>Hej 👋 I&apos;m Tomasz! I design, code, and build for the Web. </h1>
+                    <div style={{display: 'flex', flexWrap: 'wrap', gap: 16}}>
+                        <VideoButton onClick={() => openModal(<BioVideo />)}/>
+                        <Button onClick={() => openModal(<BioResume />)} primary={true}>Read my resume</Button>
+                        <Button onClick={() => openModal(<BioCoverLetter />)} primary={true}>Read my cover letter</Button>
+                    </div>
                 </Section>
 
                 <Section title={'💡 Ideation'}>
