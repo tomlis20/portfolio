@@ -212,7 +212,6 @@ export default function Home() {
                     <div style={{display: 'flex', flexWrap: 'wrap', gap: 16}}>
                         <Button icon='external' onClick={() => window.open('https://www.linkedin.com/in/tomaszlisiecki/', '_blank')}>Meet me on LinkedIn</Button>
                         <Button icon='external' onClick={() => window.open('https://www.youtube.com/watch?v=BkVLIlLbsIY&list=PLPZ893eqycAeT41i12xD3mSEpxOKuMqAG', '_blank')}>Listen to my podcast</Button>
-                        <Button icon='external' onClick={() => window.open('https://github.com/tomlis20', '_blank')}>Visit my Github</Button>
                     </div>
                     <p>
                         Made with ❤️ for Web
